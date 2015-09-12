@@ -106,8 +106,9 @@ var TimerMixin = {
   createInteractionHandle: _createInteractionHandle,
   clearInteractionHandle: _clearInteractionHandle,
   runAfterInteractions: function(callback) {
+    var self = this;
     InteractionManager.runAfterInteractions(function() {
-      this._mounted && callback();
+      self._mounted && callback();
     });
   }
 };
