@@ -105,12 +105,11 @@ var TimerMixin = {
 
   createInteractionHandle: _createInteractionHandle,
   clearInteractionHandle: _clearInteractionHandle,
-  runAfterInteractionsAsync: function(callback) {
+  waitForInteractionsAsync: function() {
     var self = this;
     return new Promise(function(resolve, reject) {
       InteractionManager.runAfterInteractions(function() {
         if (self._mounted) {
-          callback();
           resolve();
         } else {
           reject();
