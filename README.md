@@ -28,7 +28,7 @@ npm install react-native-timer-mixin
 
 ```js
 var React = require('react');
-var TimerMixin = require('react-timer-mixin');
+var TimerMixin = require('react-native-timer-mixin');
 
 var Component = React.createClass({
   mixins: [TimerMixin],
